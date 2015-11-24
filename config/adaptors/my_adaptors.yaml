@@ -1,0 +1,41 @@
+# A YAML dictionary of available adaptors
+#
+# Adaptors should be of the form
+# adaptor_name:
+#   adaptor_module: full_module_name 
+#   adaptor_function: function_name
+#   parameters:
+#     parameter_name: parameter_value
+
+ipro_raw_database:
+    adaptor_module: funtool_mysql_processes.adaptors.mysql
+    adaptor_function: mysql_statement_import
+    parameters:
+        db_connection:
+            config_file: config/private/database/mysql_config.yaml
+        SQL: "SELECT * FROM users"
+        tabular_parameters:
+          include_all_others_as: data
+
+ipro_study_1_sequence_importer:
+    adaptor_module: funtool_ipro_processes.adaptors.sequence_import
+    adaptor_function: sequence_import
+    parameters:
+        db_connection:
+            config_file: config/private/database/mysql_config.yaml
+        SQL: "SELECT * FROM snapshot_characterization INNER JOIN robot_revisions WHERE robot_revisions.id = snapshot_characterization.revision_id" 
+        start_time:
+        stop_time:
+        time_step: 150
+
+ipro_study_1_sequence_importer:
+    adaptor_module: funtool_ipro_processes.adaptors.sequence_import
+    adaptor_function: sequence_import
+    parameters:
+        db_connection:
+            config_file: config/private/database/mysql_config.yaml
+        SQL: "SELECT * FROM snapshot_characterization INNER JOIN robot_revisions WHERE robot_revisions.id = snapshot_characterization.revision_id" 
+        start_time:
+        stop_time:
+        time_step: 150
+

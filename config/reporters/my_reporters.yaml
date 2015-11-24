@@ -1,0 +1,24 @@
+ipro_characterization_save:
+  reporter_module: funtool_mysql_processes.reporters.mysql
+  reporter_function: simple_save
+  parameters:
+    table: snapshot_characterization
+    unique: true
+    require_all: true
+    values:
+      - state_property: meta 
+        state_value: robot_revision_id
+        db_column: robot_revision_id
+      - state_property: measure 
+        state_value: ipro_characterization
+        db_column: characterization
+            
+
+sequence_results:
+  reporter_module: funtool_ipro_processes.reporters.sequence_reporter
+  reporter_function: sequence_results
+  parameters: !!null
+
+interact:
+  reporter_module: funtool_common_processes.reporters.to_repl
+  reporter_function: interact

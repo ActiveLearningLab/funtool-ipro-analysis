@@ -1,0 +1,26 @@
+om_wards_hierarchy:
+  measure_module: funtool_common_processes.group_measures.hierarchical_cluster
+  measure_function: om_cluster
+  analysis_selectors: !!null
+  grouping_selectors: 
+    - all
+  parameters:
+    method: wards
+
+om_weighted_hierarchy:
+  measure_module: funtool_common_processes.group_measures.hierarchical_cluster
+  measure_function: om_cluster
+  analysis_selectors: !!null
+  grouping_selectors: 
+    - all
+  parameters:
+    method: weighted_mean
+  
+om_single_linkage_hierarchy:
+  measure_module: funtool_common_processes.group_measures.hierarchical_cluster
+  measure_function: om_cluster
+  analysis_selectors: !!null
+  grouping_selectors: 
+    - all
+  parameters:
+    method: single_linkage

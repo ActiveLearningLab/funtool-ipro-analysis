@@ -1,0 +1,181 @@
+ipro_characterization:
+  measure_module: funtool_ipro_processes.state_measures.characterization
+  measure_function: characterization 
+  analysis_selectors: !!null
+  grouping_selectors: !!null
+  parameters: !!null
+
+count_logic_blocks:
+  measure_module: funtool_ipro_processes.state_measures.blocks
+  measure_function: count
+  analysis_selectors: !!null
+  grouping_selectors: !!null
+  parameters: 
+    - "FBlock"
+    - "OrSBlock"
+    - "AndSBlock"
+    - "EqSBlock"
+    - "NotSBlock"
+    - "GTSBlock"
+    - "LTSBlock"
+
+count_sensor_blocks:
+  measure_module: funtool_ipro_processes.state_measures.blocks
+  measure_function: count
+  analysis_selectors: !!null
+  grouping_selectors: !!null
+  parameters: 
+    - "BallLSBlock"
+    - "BallRSBlock"
+    - "LightLSBlock"
+    - "LightRSBlock"
+    - "RobotLSBlock"
+    - "RobotRSBlock"
+    - "OpponentLightLSBlock"
+    - "OpponentLightRSBlock"
+
+count_action_blocks:
+  measure_module: funtool_ipro_processes.state_measures.blocks
+  measure_function: count
+  analysis_selectors: !!null
+  grouping_selectors: !!null
+  parameters: 
+    - "TurnLFAction"
+    - "TurnRFAction"
+    - "BackLFAction"
+    - "BackRFAction"
+    - "ForwardLFAction"
+    - "ForwardRFAction"
+
+wards_3_state_cluster_membership:
+  measure_module: funtool_common_processes.state_measures.clustering
+  measure_function: hierarchical_membership
+  analysis_selectors: !!null
+  grouping_selectors: !!null
+  parameters:
+    grouping: all
+    hierarchy_variable: 
+      measure: om_wards_hierarchy
+    number_of_clusters: 3
+
+wards_4_state_cluster_membership:
+  measure_module: funtool_common_processes.state_measures.clustering
+  measure_function: hierarchical_membership
+  analysis_selectors: !!null
+  grouping_selectors: !!null
+  parameters:
+    grouping: all
+    hierarchy_variable: 
+      measure: om_wards_hierarchy
+    number_of_clusters: 4
+
+wards_5_state_cluster_membership:
+  measure_module: funtool_common_processes.state_measures.clustering
+  measure_function: hierarchical_membership
+  analysis_selectors: !!null
+  grouping_selectors: !!null
+  parameters:
+    grouping: all
+    hierarchy_variable: 
+      measure: om_wards_hierarchy
+    number_of_clusters: 5
+
+wards_6_state_cluster_membership:
+  measure_module: funtool_common_processes.state_measures.clustering
+  measure_function: hierarchical_membership
+  analysis_selectors: !!null
+  grouping_selectors: !!null
+  parameters:
+    grouping: all
+    hierarchy_variable: 
+      measure: om_wards_hierarchy
+    number_of_clusters: 6
+
+weighted_3_state_cluster_membership:
+  measure_module: funtool_common_processes.state_measures.clustering
+  measure_function: hierarchical_membership
+  analysis_selectors: !!null
+  grouping_selectors: !!null
+  parameters:
+    grouping: all
+    hierarchy_variable: 
+      measure: om_weighted_hierarchy
+    number_of_clusters: 3
+
+weighted_4_state_cluster_membership:
+  measure_module: funtool_common_processes.state_measures.clustering
+  measure_function: hierarchical_membership
+  analysis_selectors: !!null
+  grouping_selectors: !!null
+  parameters:
+    grouping: all
+    hierarchy_variable: 
+      measure: om_weighted_hierarchy
+    number_of_clusters: 4
+
+weighted_5_state_cluster_membership:
+  measure_module: funtool_common_processes.state_measures.clustering
+  measure_function: hierarchical_membership
+  analysis_selectors: !!null
+  grouping_selectors: !!null
+  parameters:
+    grouping: all
+    hierarchy_variable: 
+      measure: om_weighted_hierarchy
+    number_of_clusters: 5
+
+weighted_6_state_cluster_membership:
+  measure_module: funtool_common_processes.state_measures.clustering
+  measure_function: hierarchical_membership
+  analysis_selectors: !!null
+  grouping_selectors: !!null
+  parameters:
+    grouping: all
+    hierarchy_variable: 
+      measure: om_weighted_hierarchy
+    number_of_clusters: 6
+
+single_linkage_3_state_cluster_membership:
+  measure_module: funtool_common_processes.state_measures.clustering
+  measure_function: hierarchical_membership
+  analysis_selectors: !!null
+  grouping_selectors: !!null
+  parameters:
+    grouping: all
+    hierarchy_variable: 
+      measure: om_single_linkage_hierarchy
+    number_of_clusters: 3
+
+single_linkage_4_state_cluster_membership:
+  measure_module: funtool_common_processes.state_measures.clustering
+  measure_function: hierarchical_membership
+  analysis_selectors: !!null
+  grouping_selectors: !!null
+  parameters:
+    grouping: all
+    hierarchy_variable: 
+      measure: om_single_linkage_hierarchy
+    number_of_clusters: 4
+
+single_linkage_5_state_cluster_membership:
+  measure_module: funtool_common_processes.state_measures.clustering
+  measure_function: hierarchical_membership
+  analysis_selectors: !!null
+  grouping_selectors: !!null
+  parameters:
+    grouping: all
+    hierarchy_variable: 
+      measure: om_single_linkage_hierarchy
+    number_of_clusters: 5
+
+single_linkage_6_state_cluster_membership:
+  measure_module: funtool_common_processes.state_measures.clustering
+  measure_function: hierarchical_membership
+  analysis_selectors: !!null
+  grouping_selectors: !!null
+  parameters:
+    grouping: all
+    hierarchy_variable: 
+      measure: om_single_linkage_hierarchy
+    number_of_clusters: 6
+
